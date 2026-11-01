@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud Deployment Models Visualizer</title>
+<meta name="description" content="Animated beginner guide to Public, Private, Hybrid and Community cloud.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-mode="beginner">
+<header class="top">
+ <div class="brand"><img src="assets/favicon.svg" alt="" width="36" height="36"><div><h1>Cloud Deployment Models</h1><p>Follow Ravi’s business from server room to cloud</p></div></div>
+ <div class="ctl"><div role="group" aria-label="Explanation mode"><button id="mB" aria-pressed="true">Beginner</button> <button id="mT" aria-pressed="false">Technical</button></div><button id="theme" aria-label="Switch light or dark theme">Theme</button></div>
+</header>
+<div class="layout">
+ <nav class="side" aria-label="Learning steps">
+  <div class="prog"><div id="pbar"></div></div><p id="pl" aria-live="polite">Step 1 of 9</p>
+  <ol id="steps"></ol>
+  <div class="play"><button id="play" aria-pressed="false">Auto-play</button><button id="pause">Pause</button><button id="reset">Reset</button></div>
+ </nav>
+ <main>
+  <section class="stage" aria-label="Architecture diagram">
+   <div class="sbar"><div id="sw" role="group" aria-label="Deployment model switcher"></div><button id="anim" aria-pressed="true">Animation: on</button></div>
+   <ul class="leg" aria-label="Legend"><li><i style="background:var(--pub)"></i>Public</li><li><i style="background:var(--pri)"></i>Private</li><li><i style="background:var(--hyb)"></i>Hybrid</li><li><i style="background:var(--com)"></i>Community</li><li><i style="background:var(--net)"></i>Network traffic</li><li><i style="background:var(--sec)"></i>Security restriction</li></ul>
+   <div class="scroll" id="stage"></div>
+   <p id="explorer" aria-live="polite">Architecture explorer: click (or press Enter on) any box in the diagram to learn what it does.</p>
+  </section>
+  <section class="cards" id="cards" aria-live="polite"></section>
+  <section class="tools"><div class="tabs" id="tabs" role="tablist" aria-label="Learning tools"></div>
+   <div class="tp" id="tp-ex"></div><div class="tp" id="tp-cmp" hidden></div><div class="tp" id="tp-sim" hidden></div><div class="tp" id="tp-gl" hidden></div><div class="tp" id="tp-quiz" hidden></div>
+  </section>
+ </main>
+</div>
+<script src="js/steps.js"></script><script src="js/architecture.js"></script><script src="js/animations.js"></script><script src="js/quiz.js"></script><script src="js/app.js"></script>
+</body>
+</html>
